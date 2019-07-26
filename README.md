@@ -12,8 +12,12 @@ npm install webpack webpack-cli --save-dev
 ```
 
 #### 通过 npm script 运⾏行行 webpack
+
 通过 npm run build 运⾏行行构建
 原理理:模块局部安装会在 node_modules/.bin ⽬目录创建软链接
 "scripts": {
-"build": "webpack" },
+"build": "webpack" 
+},
+
 ---
+
