@@ -11,5 +11,11 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         filename: '[name].js'
     },
-    mode: 'production'
+    mode: 'production',
+
+    module: { // 配置所有第三方loader 模块的
+        rules: [ // 第三方模块的匹配规则
+            { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }, // 配置 Babel 来转换高级的ES语法
+        ]
+    }
 };
