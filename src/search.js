@@ -2,10 +2,11 @@
 
 import React from 'react'
 import ReactDom from 'react-dom'
+import './search.css'
 
 class Search extends React.Component {
     render () {
-        return <dev> React Component  Search Page Text</dev>
+        return <dev className="search-text"> React Component  Search Page Text</dev>
     }
 }
 

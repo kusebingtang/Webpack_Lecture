@@ -34,3 +34,20 @@ babelrc 增加react配置
     ],
 }
 
+
+#### 资源解析:解析 CSS
+```shell
+npm install style-loader css-loader -D
+```
+
+* css-loader ⽤用于加载 .css ⽂文件，并且转换成 commonjs 对象
+* style-loader 将样式通过 <style> 标签插⼊入到 head 中
+
+---
+#### 解析 Less 和 SaSS
+```shell
+npm install less less-loader -D
+```
+
+* less-loader ⽤用于将 less 转换成 css
+---
