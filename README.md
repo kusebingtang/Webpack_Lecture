@@ -21,3 +21,16 @@ npm install webpack webpack-cli --save-dev
 
 ---
 
+#### React JSX 解析
+```shell
+npm install react react-dom @babel/preset-react -D
+```
+
+babelrc 增加react配置
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react",
+    ],
+}
+
