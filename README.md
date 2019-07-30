@@ -50,4 +50,9 @@ npm install less less-loader -D
 ```
 
 * less-loader ⽤用于将 less 转换成 css
+
+配置less解析
+{ test: /\.less$/, use: [  // 处理 less 文件的 loader
+                'style-loader','css-loader','less-loader'
+            ]},
 ---
