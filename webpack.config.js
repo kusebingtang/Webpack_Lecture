@@ -22,6 +22,21 @@ module.exports = {
             { test: /\.less$/, use: [  // 处理 less 文件的 loader
                 'style-loader','css-loader','less-loader'
             ]},
+            {
+                test: /.(png|jpg|gif|jpeg)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10240
+                        }
+                    }
+                ]
+            },
+            {
+                test: /.(woff|woff2|eot|ttf|otf)$/,
+                use: 'file-loader'
+            }
         ]
     }
 };

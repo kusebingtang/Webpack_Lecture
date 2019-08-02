@@ -56,3 +56,19 @@ npm install less less-loader -D
                 'style-loader','css-loader','less-loader'
             ]},
 ---
+
+####  资源解析：解析字体
+```shell
+npm install file-loader
+```
+
+配置
+            {
+                test: /.(woff|woff2|eot|ttf|otf)$/,
+                use: 'file-loader'
+            }
+
+资源解析：解析图⽚ 使⽤ url-loader
+```shell
+npm install url-loader
+```
