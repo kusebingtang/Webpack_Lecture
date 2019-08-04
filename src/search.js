@@ -8,7 +8,7 @@ import './search.less'
 class Search extends React.Component {
     render () {
         return <dev className="search-text"> 
-        React Component  Search Page Text <br/>
+        React Component  Search Page Text  Test Watch<br/>
         <img src={logo} />
         </dev>
     }
