@@ -104,3 +104,10 @@ plugins: [
     })
 ]
 ```
+
+##### html ⽂件的压缩
+* 修改 html-webpack-plugin，设置压缩参数
+
+```shell
+npm install html-webpack-plugin -D
+```
