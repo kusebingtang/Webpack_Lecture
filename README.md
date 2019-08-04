@@ -85,3 +85,22 @@ npm install  mini-css-extract-plugin -D
 * MiniCssExtractPlugin.loader,和css-loader功能互斥，MiniCssExtractPlugin将css文件作为一个单独的文件打包
 
 ---
+
+#### CSS ⽂件的压缩
+* 使⽤ optimize-css-assets-webpack-plugin
+* 同时使⽤ cssnano
+
+```shell
+npm install optimize-css-assets-webpack-plugin -D
+npm install cssnano -D
+```
+
+配置规则
+```js
+plugins: [
+    new OptimizeCSSAssetsPlugin({
+    assetNameRegExp: /\.css$/g,
+    cssProcessor: require('cssnano’)
+    })
+]
+```
