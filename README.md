@@ -73,3 +73,15 @@ npm install file-loader
 ```shell
 npm install url-loader
 ```
+
+
+#### CSS 的⽂件指纹设置
+* 设置 MiniCssExtractPlugin 的 filename，使⽤ [contenthash]
+
+```shell
+npm install  mini-css-extract-plugin -D
+```
+
+* MiniCssExtractPlugin.loader,和css-loader功能互斥，MiniCssExtractPlugin将css文件作为一个单独的文件打包
+
+---
