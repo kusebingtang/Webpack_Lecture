@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: '[name].js'
+        filename: '[name]_[chunkhash:8].js'
     },
     mode: 'production',
 
@@ -27,9 +27,10 @@ module.exports = {
                 test: /.(png|jpg|gif|jpeg)$/,
                 use: [
                     {
-                        loader: 'url-loader',
+                        // loader: 'url-loader',options: {limit: 10240 }
+                        loader: 'file-loader',  //图⽚的⽂件指纹设置  设置 file-loader 的 name，使⽤ [hash]
                         options: {
-                            limit: 10240
+                            name: '[name]_[hash:8].[ext]'
                         }
                     }
                 ]
