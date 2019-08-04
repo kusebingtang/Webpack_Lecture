@@ -111,3 +111,21 @@ plugins: [
 ```shell
 npm install html-webpack-plugin -D
 ```
+
+* 配置规则
+```js
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, 'src/search.html'),
+            filename: 'search.html',
+            chunks: ['search'],
+            inject: true,
+            minify: {
+                html5: true,
+                collapseWhitespace: true,
+                preserveLineBreaks: false,
+                minifyCSS: true,
+                minifyJS: true,
+                removeComments: false
+            }
+        }),
+```
