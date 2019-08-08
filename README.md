@@ -51,12 +51,15 @@ npm install less less-loader -D
 
 * less-loader ⽤用于将 less 转换成 css
 
-
 配置less解析
+
+```js
 { test: /\.less$/, use: [  // 处理 less 文件的 loader
                 'style-loader','css-loader','less-loader'
-            ]},
----
+             ]},
+```
+
+
 
 ####  资源解析：解析字体
 ```shell
@@ -128,4 +131,16 @@ npm install html-webpack-plugin -D
                 removeComments: false
             }
         }),
+```
+
+#### ⾃动清理构建⽬录
+
+* 使⽤ clean-webpack-plugin
+```shell
+npm install clean-webpack-plugin -D
+```
+* 配置方式
+``` js
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+plugins: [  new CleanWebpackPlugin() };
 ```
