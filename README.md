@@ -144,3 +144,27 @@ npm install clean-webpack-plugin -D
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 plugins: [  new CleanWebpackPlugin() };
 ```
+
+
+
+ #### PostCSS 插件 autoprefixer ⾃动补⻬齐 CSS3 前缀
+
+* 使⽤ autoprefixer 插件
+
+* 根据 Can I Use 规则（ https://caniuse.com/ ）
+
+  ```shell
+  npm install postcss-loader autoprefixer -D
+  ```
+
+* 配置规则
+
+  ```javascript
+  { 
+    loader: 'postcss-loader', 
+      options: { plugins: () => [ require('autoprefixer')({ browsers: ["last 2 version", "> 1%", "iOS 7"] }) ] }
+  
+  }
+  ```
+
+  
