@@ -49,6 +49,13 @@ module.exports = {
                             ]
                         }
                     },
+                    {
+                        loader: 'px2rem-loader',
+                        options: {
+                            remUnit: 75,
+                            remPrecision: 8
+                        }
+                    }
                 ]
             },
             {

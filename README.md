@@ -167,4 +167,23 @@ plugins: [  new CleanWebpackPlugin() };
   }
   ```
 
+
+
+#### 移动端 CSS px ⾃动转换成 rem
+
+* 使⽤ px2rem-loader
+
+* ⻚页⾯渲染时计算根元素的 font-size 值
+
+  ```shell
+  npm install px2rem-loader -D
+  npm install lib-flexible -S
+  ```
+
+* 配置规则
+
+  ```javascript
+  { loader: "px2rem-loader", options: { remUnit: 75, remPrecision: 8 } }
+  ```
+
   
