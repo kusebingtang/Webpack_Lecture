@@ -187,3 +187,17 @@ plugins: [  new CleanWebpackPlugin() };
   ```
 
   
+
+#### 多⻚页⾯打包通⽤⽅案
+
+* 动态获取 entry 和设置 html-webpack-plugin 数量
+* 利⽤ glob.sync
+
+```shell
+npm install glob -D
+```
+
+```javascript
+entry: glob.sync(path.join(__dirname, './src/*/index.js')),
+```
+
